@@ -1,5 +1,5 @@
 import React from 'react';
-import checkmark from '../assets/Icons/checkmark.png';
+import checkmarkblack from '../assets/Icons/checkmarkblack.png';
 
 function Slider() {
 
@@ -29,10 +29,10 @@ function Slider() {
             }}>
                 <span style={{ textWrap: 'wrap', fontSize: '2rem', textAlign: 'center', fontWeight: 600 }}><p>Science + Tech =</p>All The Fun <p>With No Hangovers</p></span>
                 <span style={{ fontSize: '1.2rem', lineHeight: '2rem', padding: '1rem' }}>
-                    <p style={{display:'flex' ,gap:'12px'}} ><img style={{maxWidth:'16px', maxHeight:'16px', alignSelf:'center' }}src={checkmark} alt="Blue checkmark" />Water break reminders</p>
-                    <p style={{display:'flex' ,gap:'12px'}} ><img style={{maxWidth:'16px', maxHeight:'16px', alignSelf:'center' }}src={checkmark} alt="Blue checkmark" />Science backed data</p>
-                    <p style={{display:'flex' ,gap:'12px'}} ><img style={{maxWidth:'16px', maxHeight:'16px', alignSelf:'center' }}src={checkmark} alt="Blue checkmark" />Time to leave reminders</p>
-                    <p style={{display:'flex' ,gap:'12px'}} ><img style={{maxWidth:'16px', maxHeight:'16px', alignSelf:'center' }}src={checkmark} alt="Blue checkmark" />Location based notifications</p></span>
+                    <p style={{display:'flex' ,gap:'12px'}} ><img style={{maxWidth:'16px', maxHeight:'16px', alignSelf:'center' }}src={checkmarkblack} alt="Blue checkmark" />Water break reminders</p>
+                    <p style={{display:'flex' ,gap:'12px'}} ><img style={{maxWidth:'16px', maxHeight:'16px', alignSelf:'center' }}src={checkmarkblack} alt="Blue checkmark" />Science backed data</p>
+                    <p style={{display:'flex' ,gap:'12px'}} ><img style={{maxWidth:'16px', maxHeight:'16px', alignSelf:'center' }}src={checkmarkblack} alt="Blue checkmark" />Time to leave reminders</p>
+                    <p style={{display:'flex' ,gap:'12px'}} ><img style={{maxWidth:'16px', maxHeight:'16px', alignSelf:'center' }}src={checkmarkblack} alt="Blue checkmark" />Location based notifications</p></span>
             </div>
             <div className='slider-page' style={{
                 minWidth: '100%',
@@ -40,7 +40,7 @@ function Slider() {
                 flexShrink: 0,
                 display: 'flex',
             }}>
-                Slide 2
+               Slide 2 <br />this is underconstruction!
             </div>
             <div className='slider-page' style={{
                 minWidth: '100%',
@@ -48,9 +48,16 @@ function Slider() {
                 flexShrink: 0,
                 display: 'flex',
             }}>
-                Slide 3
+                Slide 3 <br />this is underconstruction!
             </div>
-            
+                    <div className='slider-page' style={{
+                minWidth: '100%',
+                scrollSnapAlign: 'start',
+                flexShrink: 0,
+                display: 'flex',
+            }}>
+                Slide 4 <br />this is underconstruction!
+            </div>
         </div>
     );
 }
