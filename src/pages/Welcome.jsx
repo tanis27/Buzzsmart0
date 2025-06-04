@@ -8,7 +8,7 @@ import Slider from '../components/slider';
 
 function Welcome() {
     return (
-        <div>
+        <div className='div-centered'>
            <img src={Logo} className='logo' alt="Buzzsmart logo" />
             <Slider />
         </div>);

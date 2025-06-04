@@ -28,15 +28,24 @@ h1 {
     text-align: center;
 }
 
+.div-centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
 .logo {
     max-width: 250px;
 
 }
 
+
 .slider-page {
     background-color: white;
     height: 400px;
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     font-size: 3rem;
