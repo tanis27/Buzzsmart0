@@ -8,15 +8,13 @@
 
 body {
     padding: 16px;
-    margin-top: .5rem;
+    margin-top: 2rem;
     background-color: #FFCC01;
     font-family: 'Inter', sans-serif;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
+   
 
 
 }
@@ -29,11 +27,12 @@ h1 {
 }
 
 .div-centered {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 1rem;
 }
 
 .logo {
@@ -41,12 +40,11 @@ h1 {
 
 }
 
-
 .slider-page {
-    background-color: white;
+
     height: 400px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    font-size: 3rem;
+    font-size: 1rem;
+    padding: 16px;
 }
