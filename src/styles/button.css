@@ -1,0 +1,49 @@
+.primary {
+    background-color: #FFCC01;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 800;
+    border: 0;
+    color: #1C1903;
+    border-radius: 8px;
+    box-shadow: 0 2px 1px #0000007b;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 24px;
+    padding-right: 24px;
+    cursor: pointer;
+}
+
+.secondary {
+    background-color: #fffffd;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 800;
+    color: #1c1903;
+    border-radius: 8px;
+    border: 0;
+    box-shadow: 0 2px 1px #0000007b;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 24px;
+    padding-right: 24px;
+    cursor: pointer;
+}
+
+.primary:hover {
+    background-color: #1c1903;
+    color:#fffffd;
+}
+
+.primarty:active {
+    transform: scale(0.95);
+}
+
+.secondary:hover {
+    background-color: #D8B62F;
+    color: #1c1903;
+}
+
+.secondary:active {
+    transform: scale(0.95);
+}
