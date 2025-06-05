@@ -13,7 +13,17 @@
     padding-right: 24px;
     cursor: pointer;
 }
+.primary:hover {
+    background-color: #1c1903;
+    color:#fffffd;
+}
 
+.primarty:active {
+    transform: scale(0.95);
+}
+
+/* 
+bellow this line are secondary */
 .secondary {
     background-color: #fffffd;
     text-align: center;
@@ -28,15 +38,6 @@
     padding-left: 24px;
     padding-right: 24px;
     cursor: pointer;
-}
-
-.primary:hover {
-    background-color: #1c1903;
-    color:#fffffd;
-}
-
-.primarty:active {
-    transform: scale(0.95);
 }
 
 .secondary:hover {
