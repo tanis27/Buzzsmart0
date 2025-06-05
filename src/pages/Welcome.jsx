@@ -15,7 +15,9 @@ function Welcome() {
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('');
     const navigate = useNavigate();
-
+    const handleCreateAccountClick = () => {
+        navigate('/onboarding');
+    };
     const handleSignIn = async (e) => {
         e.preventDefault();
         try {
@@ -36,7 +38,7 @@ function Welcome() {
             <img src={Logo} className='logo' alt="Buzzsmart logo" />
             <Slider />
             <h1>Ready to Start?</h1>
-            <button style={{ backgroundColor: '#1c1903', color: '#fffffd' }} className='secondary'>
+            <button style={{ backgroundColor: '#1c1903', color: '#fffffd' }} className='secondary' onClick={handleCreateAccountClick}>
                 Create Account
             </button>
             <p>
@@ -79,7 +81,7 @@ function Welcome() {
                     Don't have an account?<br />
                     <button
                         type="button"
-                        onClick={() => setIsModalOpen(false)}
+                        onClick={handleCreateAccountClick}
                         style={{ background: 'none', border: 'none', color: '#1c1903', textDecoration: 'underline', cursor: 'pointer', marginTop: '1rem' }}
                     >Create Account Now
                     </button>
