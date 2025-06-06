@@ -7,16 +7,11 @@
 }
 
 body {
-    padding: 16px;
-    margin-top: 2rem;
-    background-color: #FFCC01;
+    background-color: #fffffd;
     font-family: 'Inter', sans-serif;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-
-
-
 }
 
 h1 {
@@ -28,11 +23,13 @@ h1 {
 
 .div-centered {
     display: flex;
+    padding: 16px;
+    gap: 1rem;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
-    gap: 1rem;
+    border-radius: 56px 56px 0 0;
 }
 
 .logo {
@@ -49,4 +46,24 @@ h1 {
     padding: 16px;
 }
 
+.div-header{
+    background-color: #FFCC01   ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-top: 2rem;
+}
 
+.div-decorative-outer{
+    background-color: #FFCC01;
+    width: 100vw;
+    height: 1.5rem;
+}
+.div-decorative-inner{
+    background-color: #fffffd;
+    width: 100vw;
+    height: 1.6rem;
+    border-radius: 100% 100% 0 0 ;
+}
