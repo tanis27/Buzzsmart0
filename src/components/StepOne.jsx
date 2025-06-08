@@ -2,10 +2,15 @@ import React, { useState } from 'react';
 import { auth, db } from '../firebase/firebase';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { doc, setDoc } from 'firebase/firestore';
+import { useNavigate } from 'react-router-dom';
 
 function StepOne({ onNext }) {
   const [form, setForm] = useState({ email: '', password: '', username: '', phone: '' });
   const [error, setError] = useState('');
+  const navigate = useNavigate();
+  const goToWelcome = () => {
+      navigate('/Welcome');
+  };
   const [showPassword, setShowPassword] = useState(false);
 
   const handleChange = (e) => {
@@ -31,13 +36,14 @@ function StepOne({ onNext }) {
   };
 
   return (
-    
-    <form onSubmit={handleSubmit} className="div-centered">
+
+    <form onSubmit={handleSubmit} className="div-content" style={{ alignItems: 'left' }}>
       {error && <p style={{ color: 'red' }}>{error}</p>}
       <h1>Create Account</h1>
 
-      <label>User Name</label>
+      <label >User Name</label>
       <input
+        className='input-field'
         type="username"
         placeholder="User Name"
         name="name"
@@ -45,8 +51,9 @@ function StepOne({ onNext }) {
         onChange={handleChange}
         required
       />
-       <label>Email</label>
+      <label className='input-label'>Email</label>
       <input
+        className='input-field'
         type="email"
         placeholder="Email"
         name="email"
@@ -54,8 +61,9 @@ function StepOne({ onNext }) {
         onChange={handleChange}
         required
       />
- <label>Password</label>
+      <label className='input-label'>Password</label>
       <input
+        className='input-field'
         type={showPassword ? "text" : "password"}
         placeholder="Password"
         name="password"
@@ -63,17 +71,19 @@ function StepOne({ onNext }) {
         onChange={handleChange}
         required
       />
-       <label>Phone Number (optional) </label>
+      <label className='input-label'>Phone Number (optional) </label>
       <input
+        className='input-field'
         type="phone"
         placeholder="Phone Number (Optional)"
         name="phone"
         value={form.phone}
         onChange={handleChange}
       />
-
-
+      <div style={{display:'flex', flexDirection:'row',justifyContent:'space-around'}}>
+      <button onClick={goToWelcome} className="primary" >Previous</button>
       <button type="submit" className="primary">Next</button>
+      </div>
     </form>
   );
 }

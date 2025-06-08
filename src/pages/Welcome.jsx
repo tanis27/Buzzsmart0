@@ -36,7 +36,7 @@ function Welcome() {
     return (
         <div style={{backgroundColor:'#FFCC01', height:'100vh'}} >
         <div className='div-header'><img src={Logo} className='logo' alt="Buzzsmart logo" /></div>
-        <div className='div-centered'>
+        <div className='div-content' style={{alignItems:'center'}}>
             <Slider />
             <h1>Ready to Start?</h1>
             <button style={{ backgroundColor: '#1c1903', color: '#fffffd' }} className='secondary' onClick={handleCreateAccountClick}>

@@ -12,6 +12,7 @@
     padding-left: 24px;
     padding-right: 24px;
     cursor: pointer;
+    min-width: 140px;
 }
 .primary:hover {
     background-color: #1c1903;
@@ -40,6 +41,7 @@ bellow this line are secondary */
     padding-left: 24px;
     padding-right: 24px;
     cursor: pointer;
+    min-width: 140px;
 }
 
 .secondary:hover {

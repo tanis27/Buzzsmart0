@@ -21,13 +21,11 @@ h1 {
     text-align: center;
 }
 
-.div-centered {
+.div-content {
     display: flex;
     padding: 16px;
     gap: 1rem;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     width: 100%;
     border-radius: 56px 56px 0 0;
 }
@@ -59,11 +57,24 @@ h1 {
 .div-decorative-outer{
     background-color: #FFCC01;
     width: 100vw;
-    height: 1.5rem;
+    height: 3rem;
 }
 .div-decorative-inner{
     background-color: #fffffd;
     width: 100vw;
-    height: 1.6rem;
-    border-radius: 100% 100% 0 0 ;
+    height: 3.1rem;
+    border-radius: 50% 50% 0 0 ;
+}
+
+.input-field{
+  font-size: 16px;
+  font-weight: 200;
+  font-family: inherit;
+  height: 44px;
+}
+
+.input-label{
+    font-size: 16px;
+    font-weight: 600;
+    font-family: inherit;
 }
