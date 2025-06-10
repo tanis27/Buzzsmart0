@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import '../styles/button.css';
-import monkey from '../assets/images/monkey.gif';
 import StepOne from '../components/StepOne'
-import Logo from '../assets/Logo.svg'
+import StepTwo from '../components/StepTwo';
+import Logo from '../assets/Logo.svg';
 
 function Onboarding() {
     const navigate = useNavigate();
