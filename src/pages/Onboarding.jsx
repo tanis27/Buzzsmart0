@@ -7,11 +7,15 @@ import StepTwo from '../components/StepTwo';
 import Logo from '../assets/Logo.svg';
 
 function Onboarding() {
-    const navigate = useNavigate();
+    const [step, setStep] = useState(1); 
 
     const goToNextStep = () => {
-        console.log("Moving to step 2...");
-        // You’ll eventually show StepTwo here
+      setStep(prev => prev + 1);
+    };
+  
+    const goToPreviousStep = () => {
+      setStep(prev => prev - 1);
+    
     };
 
     return (
@@ -20,10 +24,10 @@ function Onboarding() {
             <div className="div-decorative-outer">
             <div className="div-decorative-inner"></div>
             </div>
-    
             <div>
-                <StepOne onNext={goToNextStep} />
-            </div>
+        {step === 1 && <StepOne onNext={goToNextStep} />}
+        {step === 2 && <StepTwo onBack={goToPreviousStep} />}
+      </div>
         </>
     );
 }

@@ -1,14 +1,17 @@
-import React, { useState } from 'react';
-import { auth, db } from '../firebase/firebase';
-import { doc, setDoc } from 'firebase/firestore';
-import { useNavigate } from 'react-router-dom';
+import React from 'react';
 
 function StepTwo({ onBack }) {
-    return (
-      <div>
-        <h1>Step Two</h1>
-        <button onClick={onBack}>Back</button>
+  return (
+    <div className="div-content">
+      <h1>Step Two</h1>
+
+      <p>Thanks for signing up! Let’s finish setting up your account.</p>
+
+      <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
+        <button onClick={onBack} className="primary">Back</button>
       </div>
-    );
-    }
+    </div>
+  );
+}
+
 export default StepTwo;

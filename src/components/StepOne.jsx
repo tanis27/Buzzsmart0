@@ -44,10 +44,10 @@ function StepOne({ onNext }) {
       <label >User Name</label>
       <input
         className='input-field'
-        type="username"
+        type="text"
         placeholder="User Name"
-        name="name"
-        value={form.name}
+        name="username"
+        value={form.username}
         onChange={handleChange}
         required
       />
@@ -74,14 +74,14 @@ function StepOne({ onNext }) {
       <label className='input-label'>Phone Number (optional) </label>
       <input
         className='input-field'
-        type="phone"
+        type="tel"
         placeholder="Phone Number (Optional)"
         name="phone"
         value={form.phone}
         onChange={handleChange}
       />
       <div style={{display:'flex', flexDirection:'row',justifyContent:'space-around'}}>
-      <button onClick={goToWelcome} className="primary" >Previous</button>
+      <button disabled className="primary" >Previous</button>
       <button type="submit" className="primary">Next</button>
       </div>
     </form>
