@@ -3,6 +3,8 @@ import './styles/global.css';
 import Welcome from './pages/Welcome';
 import Dashboard from './pages/Dashboard';
 import Onboarding from './pages/Onboarding';
+import StepTwo from './components/StepTwo';
+import Progress from './components/ProgressBar';
 
 function App() {
   return (
@@ -11,6 +13,8 @@ function App() {
       <Route path="/dashboard" element={<Dashboard />} />
       <Route path="/welcome" element={<Welcome />} />
       <Route path="/onboarding" element={<Onboarding />}/>
+      <Route path="/test-steptwo" element={<StepTwo />} />
+
     </Routes>
   );
 }

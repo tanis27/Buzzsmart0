@@ -4,7 +4,7 @@ import { doc, updateDoc } from 'firebase/firestore';
 
 
 function StepTwo({ onBack }) {
-    const [form, setForm] = useState({ gender: '', weight: '', feet: '', inches: ''  });
+    const [form, setForm] = useState({ gender: '', weight: '', feet: '', inches: '',  });
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('');
     const handleChange = (e) => {
@@ -23,6 +23,7 @@ function StepTwo({ onBack }) {
                 weight: form.weight,
                 feet: form.feet,
                 inches: form.inches,
+                kg: form.kg,
             });
 
             setSuccess('Info saved successfully!');
