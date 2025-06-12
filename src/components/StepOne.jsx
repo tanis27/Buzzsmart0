@@ -81,7 +81,7 @@ function StepOne({ onNext }) {
         onChange={handleChange}
       />
       <div style={{display:'flex', flexDirection:'row',justifyContent:'space-around'}}>
-      <button disabled className="primary" >Previous</button>
+      <button className="primary" onClick={goToWelcome} >Previous</button>
       <button type="submit" className="primary">Next</button>
       </div>
 

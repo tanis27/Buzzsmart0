@@ -7,6 +7,7 @@ import StepTwo from '../components/StepTwo';
 import Logo from '../assets/Logo.svg';
 import Modal from '../components/Modal';
 import ProgressBar from '../components/ProgressBar';
+import StepThree from '../components/StepThree';
 
 
 function Onboarding() {
@@ -59,7 +60,8 @@ function Onboarding() {
       <div>
 
         {step === 1 && <StepOne onNext={goToNextStep} />}
-        {step === 2 && <StepTwo onBack={goToPreviousStep} />}
+        {step === 2 && <StepTwo onNext={goToNextStep} onBack={goToPreviousStep} />}
+        {step === 3 && <StepThree onNext={goToNextStep} onBack={goToPreviousStep} />}
 
       </div>
 

@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { db, auth } from '../firebase/firebase';
 import { doc, updateDoc } from 'firebase/firestore';
+import { Navigate } from 'react-router-dom';
 
 
-function StepTwo({ onBack }) {
+function StepTwo({ onBack, onNext }) {
     const [form, setForm] = useState({ gender: '', weight: '', feet: '', inches: '',  });
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('');
@@ -23,7 +24,6 @@ function StepTwo({ onBack }) {
                 weight: form.weight,
                 feet: form.feet,
                 inches: form.inches,
-                kg: form.kg,
             });
 
             setSuccess('Info saved successfully!');
@@ -74,8 +74,8 @@ function StepTwo({ onBack }) {
                 required
             />
               <div style={{display:'flex', flexDirection:'row',justifyContent:'space-around'}}>
-      <button disabled className="primary" >Previous</button>
-      <button type="submit" className="primary">Next</button>
+      <button  className="primary" onClick={onBack} >Previous</button>
+      <button type="submit" onClick={onNext} className="primary">Next</button>
       </div>
         </form>
     );
