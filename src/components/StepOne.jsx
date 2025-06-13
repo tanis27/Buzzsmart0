@@ -41,7 +41,7 @@ function StepOne({ onNext }) {
       {error && <p style={{ color: 'red' }}>{error}</p>}
       <h1>Create Account</h1>
 
-      <label >User Name</label>
+      <label className='input-label'>User Name
       <input
         className='input-field'
         type="text"
@@ -50,7 +50,7 @@ function StepOne({ onNext }) {
         value={form.username}
         onChange={handleChange}
         required
-      />
+      /></label>
       <label className='input-label'>Email</label>
       <input
         className='input-field'

@@ -77,4 +77,7 @@ h1 {
     font-size: 16px;
     font-weight: 600;
     font-family: inherit;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }

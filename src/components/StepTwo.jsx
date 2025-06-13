@@ -5,7 +5,7 @@ import { Navigate } from 'react-router-dom';
 
 
 function StepTwo({ onBack, onNext }) {
-    const [form, setForm] = useState({ gender: '', weight: '', feet: '', inches: '',  });
+    const [form, setForm] = useState({ gender: '', weight: '', feet: '', inches: '', birthday: '' });
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('');
     const handleChange = (e) => {
@@ -24,6 +24,7 @@ function StepTwo({ onBack, onNext }) {
                 weight: form.weight,
                 feet: form.feet,
                 inches: form.inches,
+                birthday: form.birthday,
             });
 
             setSuccess('Info saved successfully!');
@@ -33,50 +34,62 @@ function StepTwo({ onBack, onNext }) {
         }
     };
     return (
-        <form onSubmit={handleSubmit} className="div-content">
+        <form onSubmit={handleSubmit} className="div-content" >
             {error && <p style={{ color: 'red' }}>{error}</p>}
             {success && <p style={{ color: 'green' }}>{success}</p>}
 
             <h1>Bio-metric Information</h1>
             <h3>Gender assigned at birth</h3>
-            <select name="gender" value={form.gender} onChange={handleChange} required>
+            <p>Why are we asking you this?</p>
+            <select style={{ height: '44px', fontSize: '16px', }} name="gender" value={form.gender} onChange={handleChange} required>
                 <option value="">Select Gender</option>
                 <option value="female">Female</option>
                 <option value="male">Male</option>
             </select>
-            <label className='input-label'>Weight (lbs)</label>
-            <input
+
+            <label className='input-label' >Weight (lbs)
+                <input
+                    className='input-field'
+                    type="number"
+                    placeholder="Weight (lbs)"
+                    name="weight"
+                    value={form.weight}
+                    onChange={handleChange}
+                    required
+                /></label>
+            <label className='input-label' >Height
+               <div style={{ display: 'flex', flexDirection: 'row', gap: '1rem' }}> <input
+                    className='input-field'
+                    type="number"
+                    placeholder="Ft"
+                    name="feet"
+                    value={form.feet}
+                    onChange={handleChange}
+                    required
+                />
+                <input
+                    className='input-field'
+                    type="number"
+                    placeholder="in"
+                    name="inches"
+                    value={form.inches}
+                    onChange={handleChange}
+                    required
+                /></div></label>
+            <label className='input-label' >Birthday (Month & Day)<input
                 className='input-field'
-                type= "number"
-                placeholder="Weight (lbs)"
-                name="weight"
-                value={form.weight}
+                type="number"
+                placeholder="mm/dd"
+                name="birthday"
+                pattern="\d{2}/\d{2}"
+                value={form.birthday}
                 onChange={handleChange}
                 required
-            />
-            <label className='input-label'>Height</label>
-            <input
-                className='input-field'
-                type= "number"
-                placeholder="Ft"
-                name="feet"
-                value={form.feet}
-                onChange={handleChange}
-                required
-            />
-            <input
-                className='input-field'
-                type= "number"
-                placeholder="in"
-                name="inches"
-                value={form.inches}
-                onChange={handleChange}
-                required
-            />
-              <div style={{display:'flex', flexDirection:'row',justifyContent:'space-around'}}>
-      <button  className="primary" onClick={onBack} >Previous</button>
-      <button type="submit" onClick={onNext} className="primary">Next</button>
-      </div>
+            /></label>
+            <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around' }}>
+                <button className="primary" onClick={onBack} >Previous</button>
+                <button type="submit" onClick={onNext} className="primary">Next</button>
+            </div>
         </form>
     );
 }
