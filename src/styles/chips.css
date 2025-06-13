@@ -1,0 +1,72 @@
+.chips-round{
+    border-radius: 100px;
+    box-shadow: 2px 2px 2px #d3d3d3;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+    border-width: .1px;
+    border-color: #d3d3d3;
+}
+.chips-round:hover {
+    background-color: #ffe41c;
+    color:#000000;
+}
+
+.chips-round:active {
+    transform: scale(0.95);
+}
+
+.chips-large {
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px #d3d3d3;
+    width: 70px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    border-style: solid;
+    border-width: .1px;
+    border-color: #d3d3d3;
+    gap: 4px;   
+}
+
+.chips-large:hover {
+    background-color: #ffe41c;
+    color:#000000;
+  
+}
+
+.chips-large:active {
+    transform: scale(0.95);
+}
+
+.chips-small {
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px #d3d3d3;
+    width: 70px;
+    height: 44px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;  
+    border-style: solid;
+    border-width: .1px;
+    border-color: #d3d3d3;
+    text-align: center;
+}
+
+.chips-small:hover {
+    background-color: #ffe41c;
+    color:#000000;
+}
+
+.chips-small:active {
+    transform: scale(0.95);
+}
